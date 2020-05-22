@@ -1,0 +1,29 @@
+<nav class="border fixed split-nav  margin-bottom-large">
+  <div class="nav-brand">
+    <h3><a href="#">WB</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible" type="checkbox" name="collapsible">
+    <button>
+      <label for="collapsible">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        <li routerLinkActive="active" *ngFor="let item of [1,2,3,4,5];let i=index">
+          <a   routerLink="/page/{{i+1}}">Page {{i+1}}</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="paper container  margin-top-large">
+  <div class="row">
+      <router-outlet></router-outlet>
+  </div>
+</div>
+
